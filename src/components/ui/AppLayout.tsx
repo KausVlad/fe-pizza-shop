@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import TopHeader from "../TopHeader";
+import MainHeader from "../MainHeader";
 
 export default function AppLayout() {
   return (
     <div className="grid h-screen grid-rows-[auto_auto_1fr_auto]">
       <TopHeader />
-      <header className="sticky top-0 bg-gray-100">main header</header>
+      <MainHeader />
       <main>
         <Outlet />
       </main>
