@@ -1,11 +1,15 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AppLayout from "./components/ui/AppLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [],
+  },
+]);
 function App() {
-  return (
-    <>
-      <h1 className="m-10 text-5xl text-yellow-500">
-        React + TypeScript + Vite
-      </h1>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
