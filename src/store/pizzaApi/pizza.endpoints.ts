@@ -1,10 +1,11 @@
 import { pizzaApi } from "./pizza.api";
+import { TPizzaData } from "./pizza.endpoints.types";
 
 export const pizzaEndpoints = pizzaApi.injectEndpoints({
   endpoints: (builder) => ({
-    getPizzas: builder.query({
+    getPizzas: builder.query<TPizzaData[], null>({
       query: () => ({
-        url: "/pizzas/all",
+        url: "/pizza/all",
         // params: {
         //   ingredientName,
         // },
@@ -12,3 +13,5 @@ export const pizzaEndpoints = pizzaApi.injectEndpoints({
     }),
   }),
 });
+
+export const { useGetPizzasQuery } = pizzaEndpoints;
