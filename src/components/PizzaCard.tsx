@@ -1,18 +1,14 @@
-type PizzaCardProps = {
-  pizzaName: string;
-  size: "SMALL" | "STANDARD" | "LARGE" | "HUGE";
-  weightStandard: number;
-  priceStandard: number;
-  doughCrust: "THIN" | "THICK_CRUST" | "PHILADELPHIA" | "HOT_DOG_CRUST";
-  ingredients: {
-    id: number;
-    ingredientName: string;
-  };
-  pizzaAttributes: {
-    id: number;
-    attributeName: "CHEESE" | "VEGETARIAN" | "SPICY" | "NEW" | "NONE";
-  };
+import { TPizzaData } from "../store/pizzaApi/pizza.endpoints.types";
+
+type TPizzaCardProps = {
+  pizzaData: TPizzaData;
 };
-export default function PizzaCard({}: PizzaCardProps) {
-  return <div></div>;
+
+export default function PizzaCard({ pizzaData }: TPizzaCardProps) {
+  return (
+    <div className="flex">
+      <img src={"/img/refPizza.webp"} alt="pizza" />
+      <div>{pizzaData.pizzaName}</div>
+    </div>
+  );
 }
