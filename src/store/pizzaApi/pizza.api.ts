@@ -5,5 +5,6 @@ export const pizzaApi = createApi({
   reducerPath: "pizzaApi",
   baseQuery: fetchBaseQuery({ baseUrl }),
   tagTypes: ["Test"],
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   endpoints: (_) => ({}),
 });
