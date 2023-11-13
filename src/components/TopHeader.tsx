@@ -4,7 +4,7 @@ export default function TopHeader() {
   return (
     <header className="bg-neutral-800">
       <nav
-        className="m-auto flex h-20 max-w-7xl items-center justify-between px-4"
+        className="m-auto flex h-20 max-w-screen-2xl items-center justify-between px-4"
         role="navigation"
       >
         <div className="flex gap-8">
