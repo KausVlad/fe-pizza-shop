@@ -8,6 +8,7 @@ type TButtonProps = VariantProps<typeof buttonStyles> &
 
 export default function Button({
   variant,
+  selectedStatus,
   paddingSize,
   className,
   ...props
@@ -15,7 +16,10 @@ export default function Button({
   return (
     <button
       {...props}
-      className={twMerge(buttonStyles({ variant, paddingSize }), className)}
+      className={twMerge(
+        buttonStyles({ variant, selectedStatus, paddingSize }),
+        className,
+      )}
     />
   );
 }

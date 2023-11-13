@@ -11,6 +11,12 @@ export const buttonStyles = cva(["transition-colors"], {
         "rounded-full font-extrabold bg-neutral-600 hover:bg-neutral-500",
       roundedRed:
         "text-white rounded-full font-semibold bg-red-600 hover:bg-red-800",
+      toggle: "rounded-full border border-neutral-400 py-1",
+    },
+
+    selectedStatus: {
+      true: "bg-neutral-600 text-white",
+      false: "",
     },
 
     paddingSize: {
