@@ -11,7 +11,12 @@ export const pizzaEndpoints = pizzaApi.injectEndpoints({
         // },
       }),
     }),
+    getPizzaByName: builder.query<TPizzaData, string>({
+      query: (pizzaName) => ({
+        url: `/pizza/${pizzaName}`,
+      }),
+    }),
   }),
 });
 
-export const { useGetPizzasQuery } = pizzaEndpoints;
+export const { useGetPizzasQuery, useGetPizzaByNameQuery } = pizzaEndpoints;
