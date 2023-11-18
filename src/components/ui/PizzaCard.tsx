@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TPizzaData } from "../../store/pizzaApi/pizza.endpoints.types";
 import Button from "./Button";
 
@@ -16,6 +17,7 @@ export default function PizzaCard({ pizzaData }: TPizzaCardProps) {
             .map((ingredient) => ingredient.ingredientName)
             .join(", ")}
         </p>
+        <Link to={`/pizza/${pizzaData.pizzaName}`}>View</Link>
         <div className="grid grid-cols-3 grid-rows-2 gap-2">
           <Button variant={"toggle"} selectedStatus={false}>
             Small
